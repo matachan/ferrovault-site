@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FerroVault — your photos, on your own computer</title>
+<meta name="description" content="FerroVault is a self-hosted photo and video server for your home network. Your iPhone syncs to your own PC — no cloud, no accounts, no tracking.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;1,600&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="site">
+    <div class="dial" aria-hidden="true">FV</div>
+    <div class="name">FerroVault</div>
+    <nav>
+      <a href="#how">How it works</a>
+      <a href="#install">Install</a>
+      <a href="#download">Download</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <h1>Your photos. Your computer. <em>Your network.</em></h1>
+      <p class="lede">FerroVault turns a Windows PC into a private photo &amp; video vault for your household. Your iPhone backs up to it over your own Wi&#8209;Fi — and that's the whole journey. No cloud. No subscription. No one else's servers.</p>
+      <p class="vow">It syncs while open, and pauses honestly when you leave — no background magic, no surprises.</p>
+    </div>
+
+    <section id="how">
+      <h2>How it works</h2>
+      <div class="cols">
+        <div class="card">
+          <span class="step">Step 1</span>
+          <h3>Run the vault</h3>
+          <p>Install the FerroVault server on the Windows PC where you want your photos to live. The installer sets everything up — storage location, firewall, dashboard.</p>
+        </div>
+        <div class="card">
+          <span class="step">Step 2</span>
+          <h3>Get the app</h3>
+          <p>Install FerroVault on your iPhone. Open it on your home Wi&#8209;Fi and it finds your vault by name — no IP addresses to type, no certificates to fight.</p>
+        </div>
+        <div class="card">
+          <span class="step">Step 3</span>
+          <h3>Keep what's yours</h3>
+          <p>Photos and videos copy straight from your phone to your PC, full quality. Browse them from the vault's own dashboard. Everything stays inside your house.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="install">
+      <h2>Installation</h2>
+      <p class="section-lede">The full walkthrough, one step at a time. Expand a step when you're ready for it.</p>
+
+      <details class="acc">
+        <summary><span class="acc-n">1</span> Install the server on your Windows PC</summary>
+        <div class="acc-body">
+          <p>Download the FerroVault installer (see <a href="#download">Download</a> below) and run it on the PC that will hold your library — ideally one that stays on and has room to grow.</p>
+          <p>The installer is self-contained: it brings its own runtime, sets up the Windows service so the vault starts with your PC, and opens the one local-network port it needs. You'll choose a <strong>storage folder</strong> — point it at the drive with the space (an internal or always-connected external drive).</p>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary><span class="acc-n">2</span> Open the dashboard &amp; create your vault</summary>
+        <div class="acc-body">
+          <p>When setup finishes, the vault's dashboard opens in your browser on the PC. You'll create an <strong>admin account</strong> (this stays on your machine — there's no FerroVault account anywhere else) and confirm the storage location.</p>
+          <p>That's the server done. It now waits quietly on your home network for your phone.</p>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary><span class="acc-n">3</span> Install the iPhone app</summary>
+        <div class="acc-body">
+          <p>Get FerroVault for iPhone (see <a href="#download">Download</a>). During the testing period it's delivered through Apple's TestFlight; a public App Store release follows.</p>
+          <p>Open the app while your phone is on the <strong>same Wi-Fi</strong> as the PC. It scans the local network and lists your vault by name — tap it to connect. No IP addresses, no certificate prompts.</p>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary><span class="acc-n">4</span> Sign in &amp; start your first sync</summary>
+        <div class="acc-body">
+          <p>Sign in with the admin account you made on the dashboard. Grant the app access to your photos when iOS asks.</p>
+          <p>Choose how much to bring over — everything, or a recent window — and start the sync. Photos and videos copy at full quality straight to your PC. <strong>Keep the app open</strong> while it runs; it shows live progress and pauses honestly if you switch away, so nothing is ever half-done in secret.</p>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary><span class="acc-n">5</span> Browse, and keep it running</summary>
+        <div class="acc-body">
+          <p>Everything in your vault is browsable from the dashboard on the PC — by date, album, or search — and the files sit in a plain, human-readable folder structure on disk. They're <em>your</em> files; you can open them in Explorer any time.</p>
+          <p>Leave the PC on and FerroVault keeps catching new photos each time you open the app on your home network. That's the whole rhythm.</p>
+        </div>
+      </details>
+    </section>
+
+    <section id="download">
+      <h2>Download</h2>
+      <div class="dl">
+        <div class="card">
+          <h3>FerroVault Server <span class="badge">Coming&nbsp;soon</span></h3>
+          <p>Windows installer — one file, no dependencies. It'll be downloadable right here, with a link to the source release on GitHub for anyone who'd rather get it there.</p>
+          <a class="btn" aria-disabled="true">Installer in final testing</a>
+        </div>
+        <div class="card">
+          <h3>FerroVault for iPhone <span class="badge">TestFlight</span></h3>
+          <p>Currently in private testing. The public TestFlight invite link will appear here when the doors open.</p>
+          <a class="btn" aria-disabled="true">Invite link coming</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site">
+    <span>FerroVault</span>
+    <a href="privacy.html">Privacy policy</a>
+    <a href="mailto:ferro.dev@icloud.com">ferro.dev@icloud.com</a>
+  </footer>
+
+</div>
+</body>
+</html>

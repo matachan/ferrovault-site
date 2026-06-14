@@ -1,0 +1,256 @@
+/* FerroVault — public site. Plain CSS, no build step. */
+
+:root {
+  --ink: #0f1214;          /* near-black, slightly warm */
+  --iron: #1a1f23;         /* panel */
+  --seam: #2c343a;         /* hairline borders */
+  --text: #e8e4dd;         /* warm paper-white */
+  --muted: #9aa3a9;
+  --ember: #e25b2c;        /* the one accent: oxidized iron */
+  --ember-dim: #b34723;
+  --max: 64rem;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--ink);
+  color: var(--text);
+  font-family: "Atkinson Hyperlegible", sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  /* faint grain so the dark field isn't dead flat */
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(226, 91, 44, 0.07), transparent),
+    repeating-linear-gradient(0deg, transparent 0 2px, rgba(255,255,255,0.012) 2px 4px);
+}
+
+h1, h2, h3 {
+  font-family: "Fraunces", serif;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.15;
+}
+
+a { color: var(--ember); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: #f07a4d; }
+
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 1.5rem; }
+
+/* ---------- header ---------- */
+
+header.site {
+  display: flex; align-items: center; gap: 0.85rem;
+  padding: 1.4rem 0;
+  border-bottom: 1px solid var(--seam);
+}
+
+.dial {
+  width: 2.4rem; height: 2.4rem; flex: none;
+  border-radius: 50%;
+  border: 2px solid var(--ember);
+  position: relative;
+  display: grid; place-items: center;
+  font-family: "Fraunces", serif;
+  font-size: 0.95rem; font-weight: 700; color: var(--ember);
+}
+/* vault-dial notches */
+.dial::before {
+  content: ""; position: absolute; inset: -7px;
+  border-radius: 50%;
+  background:
+    conic-gradient(from 0deg,
+      var(--seam) 0 2deg, transparent 2deg 88deg,
+      var(--seam) 88deg 92deg, transparent 92deg 178deg,
+      var(--seam) 178deg 182deg, transparent 182deg 268deg,
+      var(--seam) 268deg 272deg, transparent 272deg 358deg,
+      var(--seam) 358deg 360deg);
+  -webkit-mask: radial-gradient(circle, transparent 62%, #000 63%);
+          mask: radial-gradient(circle, transparent 62%, #000 63%);
+}
+
+header.site .name {
+  font-family: "Fraunces", serif;
+  font-size: 1.25rem; font-weight: 600;
+}
+header.site nav { margin-left: auto; }
+header.site nav a { color: var(--muted); text-decoration: none; margin-left: 1.4rem; font-size: 0.95rem; }
+header.site nav a:hover { color: var(--text); }
+
+/* ---------- hero ---------- */
+
+.hero { padding: 5.5rem 0 4rem; }
+
+.hero h1 {
+  font-size: clamp(2.4rem, 6vw, 4.2rem);
+  margin: 0 0 1.2rem;
+  max-width: 18ch;
+}
+.hero h1 em {
+  font-style: italic;
+  color: var(--ember);
+}
+
+.hero p.lede {
+  font-size: 1.25rem; color: var(--muted);
+  max-width: 44ch; margin: 0;
+}
+
+.hero .vow {
+  margin-top: 2.4rem;
+  display: inline-block;
+  border-left: 3px solid var(--ember);
+  padding: 0.35rem 0 0.35rem 1rem;
+  color: var(--text);
+  font-size: 1.05rem;
+}
+
+/* staggered load-in */
+.hero > * { opacity: 0; transform: translateY(10px); animation: rise 0.7s ease forwards; }
+.hero > *:nth-child(2) { animation-delay: 0.12s; }
+.hero > *:nth-child(3) { animation-delay: 0.24s; }
+@keyframes rise { to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) {
+  .hero > * { animation: none; opacity: 1; transform: none; }
+}
+
+/* ---------- sections ---------- */
+
+section { padding: 3.2rem 0; border-top: 1px solid var(--seam); }
+
+section h2 {
+  font-size: 1.6rem; margin: 0 0 1.6rem;
+}
+section h2::before {
+  content: "— ";
+  color: var(--ember);
+}
+
+.cols {
+  display: grid; gap: 1.2rem;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+
+.card {
+  background: var(--iron);
+  border: 1px solid var(--seam);
+  border-radius: 6px;
+  padding: 1.4rem 1.5rem;
+}
+.card .step {
+  font-family: "Fraunces", serif;
+  color: var(--ember); font-size: 0.95rem; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase;
+}
+.card h3 { font-size: 1.15rem; margin: 0.5rem 0 0.5rem; }
+.card p { margin: 0; color: var(--muted); font-size: 0.98rem; }
+
+/* ---------- download ---------- */
+
+.dl {
+  display: flex; flex-wrap: wrap; gap: 1.2rem; align-items: stretch;
+}
+.dl .card { flex: 1 1 18rem; }
+
+.badge {
+  display: inline-block;
+  font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase;
+  border: 1px solid var(--seam); border-radius: 999px;
+  padding: 0.15rem 0.7rem; color: var(--muted);
+  margin-left: 0.6rem; vertical-align: 2px;
+}
+.badge.live { border-color: var(--ember); color: var(--ember); }
+
+.btn {
+  display: inline-block; margin-top: 1rem;
+  background: var(--ember); color: var(--ink);
+  font-weight: 700; text-decoration: none;
+  padding: 0.6rem 1.2rem; border-radius: 4px;
+}
+.btn:hover { background: #f07a4d; color: var(--ink); }
+.btn[aria-disabled="true"] {
+  background: transparent; color: var(--muted);
+  border: 1px dashed var(--seam); cursor: default;
+}
+
+/* ---------- prose (privacy page) ---------- */
+
+.prose { max-width: 42rem; padding: 3.5rem 0 4rem; }
+.prose h1 { font-size: clamp(1.9rem, 4vw, 2.6rem); }
+.prose .updated { color: var(--muted); font-size: 0.92rem; }
+.prose p { margin: 1.1rem 0; }
+.prose strong { color: var(--text); }
+
+/* ---------- footer ---------- */
+
+footer.site {
+  border-top: 1px solid var(--seam);
+  padding: 2rem 0 3rem;
+  color: var(--muted); font-size: 0.92rem;
+  display: flex; flex-wrap: wrap; gap: 0.4rem 1.6rem;
+}
+footer.site a { color: var(--muted); }
+footer.site a:hover { color: var(--text); }
+
+/* ---------- section lede + accordion (install steps) ---------- */
+
+.section-lede {
+  color: var(--muted);
+  margin: -0.8rem 0 1.8rem;
+  max-width: 46ch;
+}
+
+details.acc {
+  background: var(--iron);
+  border: 1px solid var(--seam);
+  border-radius: 6px;
+  margin-bottom: 0.8rem;
+  overflow: hidden;
+}
+details.acc + details.acc { margin-top: -0.2rem; }
+
+details.acc summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 1.1rem 1.4rem;
+  display: flex; align-items: center; gap: 0.9rem;
+  font-family: "Fraunces", serif;
+  font-size: 1.1rem; font-weight: 600;
+  color: var(--text);
+  transition: background 0.15s ease;
+}
+details.acc summary::-webkit-details-marker { display: none; }
+details.acc summary:hover { background: rgba(226, 91, 44, 0.05); }
+
+/* the +/- affordance on the right */
+details.acc summary::after {
+  content: "+";
+  margin-left: auto;
+  font-family: "Atkinson Hyperlegible", sans-serif;
+  font-size: 1.4rem; line-height: 1; color: var(--ember);
+  transition: transform 0.2s ease;
+}
+details.acc[open] summary::after { content: "\2212"; /* minus */ }
+
+.acc-n {
+  flex: none;
+  width: 1.8rem; height: 1.8rem;
+  display: grid; place-items: center;
+  border: 1.5px solid var(--ember); border-radius: 50%;
+  color: var(--ember);
+  font-size: 0.95rem; font-weight: 700;
+}
+
+.acc-body {
+  padding: 0 1.4rem 1.3rem;
+  border-top: 1px solid var(--seam);
+}
+.acc-body p { margin: 1rem 0 0; color: var(--muted); }
+.acc-body strong { color: var(--text); }
+
+@media (prefers-reduced-motion: no-preference) {
+  details.acc[open] .acc-body { animation: rise 0.35s ease; }
+}
