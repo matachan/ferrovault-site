@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FerroVault — Help &amp; FAQ</title>
+<meta name="description" content="Friendly answers about FerroVault: what it is, how to install and uninstall it, what it can do today, and where your photos actually live.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;1,600&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="site">
+    <div class="dial" aria-hidden="true">FV</div>
+    <div class="name"><a href="index.html" style="color:inherit;text-decoration:none">FerroVault</a></div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="index.html#how">How it works</a>
+      <a href="index.html#install">Install</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <h1>Help &amp; <em>FAQ</em></h1>
+      <p class="lede">Plain-English answers about FerroVault — what it is, how to set it up, and where your photos really live.</p>
+    </div>
+
+    <section id="what">
+      <h2>What is FerroVault?</h2>
+      <p class="section-lede">Your own private cloud for your memories — running on a computer you own.</p>
+      <p style="color:var(--muted); max-width:60ch;">FerroVault is a <strong style="color:var(--text)">self-hosted photo &amp; video library</strong>. Instead of your photos living on a big company's servers, they live on <strong style="color:var(--text)">your own computer</strong>, in a folder you control. Think of it as your own Google&nbsp;Photos or iCloud&nbsp;Photos — except the data never leaves your home unless you decide it should.</p>
+      <p style="color:var(--muted); max-width:60ch;">You run a small <strong style="color:var(--text)">server app</strong> on a Mac (Windows &amp; Linux are coming), your <strong style="color:var(--text)">iPhone backs up to it</strong> over your home Wi&#8209;Fi, and you browse everything from a <strong style="color:var(--text)">web dashboard</strong> in any browser — or from the FerroVault iOS app.</p>
+    </section>
+
+    <section id="how">
+      <h2>How it works</h2>
+      <p class="section-lede">Three simple pieces that work together on your home network.</p>
+      <div class="cols">
+        <div class="card">
+          <span class="step">The server</span>
+          <h3>Your library's home</h3>
+          <p>A small app you run on your always-on computer (such as a Mac). It stores and organizes your library. On a Mac, it lives quietly in your menu bar.</p>
+        </div>
+        <div class="card">
+          <span class="step">The dashboard</span>
+          <h3>Where you browse</h3>
+          <p>A web page you open from the menu bar to browse photos, albums, and manage your library. Other devices on your network can reach it too, using your computer's address.</p>
+        </div>
+        <div class="card">
+          <span class="step">The iOS app</span>
+          <h3>Backup &amp; browse</h3>
+          <p>Backs up your iPhone's photos to your server, and lets you browse your whole library on the go while you're on your network.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="features">
+      <h2>What can it do today?</h2>
+      <p class="section-lede">An honest list of what works right now.</p>
+      <ul class="feat">
+        <li>Backs up iPhone photos &amp; videos to your own server — chunked and resumable, tested with large 25&nbsp;GB+ libraries — while the app is open and your phone is awake.</li>
+        <li>Full support for Apple formats: <strong>HEIC/HEIF, Live Photos, RAW, and video</strong>, plus JPEG and PNG.</li>
+        <li>Web dashboard to browse, search, organize albums, see per-device views, and check storage insights.</li>
+        <li><strong>De-duplication</strong> so the same photo isn't stored twice — and a trustworthy "X of Y backed up" picture of your library.</li>
+        <li>Multi-device &amp; multi-user: pair phones in seconds with QR sign-in, and share albums.</li>
+        <li>Menu-bar app on Mac with a Quick Glance panel: storage used and free, library size, server status, and a one-click jump to the dashboard.</li>
+        <li>Your data is yours: a backup and restore you can verify, and nothing uploaded to any third party.</li>
+      </ul>
+      <p class="note">A quick note on automatic backup: for now, syncing happens while the app is open — a set-and-watch flow with live progress. Fully automatic background backup is on the way; today the reliable path is leaving the app open while it syncs.</p>
+    </section>
+
+    <section id="install">
+      <h2>Installing on Mac <span class="badge">Coming&nbsp;soon</span></h2>
+      <p class="section-lede">The download isn't public yet — but here's exactly what to expect when it is.</p>
+
+      <details class="acc">
+        <summary><span class="acc-n">1</span> Download &amp; open FerroVault.dmg</summary>
+        <div class="acc-body">
+          <p>Download <strong>FerroVault.dmg</strong> (coming soon) and double-click to open it.</p>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary><span class="acc-n">2</span> Drag it into Applications</summary>
+        <div class="acc-body">
+          <p>Drag <strong>FerroVault</strong> into your <strong>Applications</strong> folder, just like any Mac app.</p>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary><span class="acc-n">3</span> Launch it</summary>
+        <div class="acc-body">
+          <p>Open FerroVault. It appears in your <strong>menu bar</strong> (top-right of your screen) and starts your server automatically. Because the app is <strong>notarized by Apple</strong>, it opens normally — no scary "unidentified developer" warnings.</p>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary><span class="acc-n">4</span> Open the dashboard &amp; set up</summary>
+        <div class="acc-body">
+          <p>Click the menu-bar icon, choose <strong>Open Dashboard</strong>, and follow the quick setup to pick where your library lives and create your account.</p>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary><span class="acc-n">5</span> Turn on Start at Login (optional)</summary>
+        <div class="acc-body">
+          <p>Flip on <strong>Start at Login</strong> so your server is always ready whenever your phone wants to back up.</p>
+        </div>
+      </details>
+    </section>
+
+    <section id="uninstall">
+      <h2>Uninstalling on Mac</h2>
+      <p class="section-lede">Uninstalling never deletes your photos — they're stored separately and stay put.</p>
+
+      <details class="acc">
+        <summary><span class="acc-n">1</span> Quit FerroVault</summary>
+        <div class="acc-body">
+          <p>Click the menu-bar icon, turn off <strong>Start at Login</strong> (if it's on), then choose <strong>Quit FerroVault</strong>.</p>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary><span class="acc-n">2</span> Move the app to the Trash</summary>
+        <div class="acc-body">
+          <p>Drag <strong>FerroVault</strong> from your Applications folder to the <strong>Trash</strong>.</p>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary><span class="acc-n">3</span> Remove its settings (optional)</summary>
+        <div class="acc-body">
+          <p>For a clean slate, you can delete the app's settings folder at <code>~/Library/Application Support/FerroVault</code>. This is optional.</p>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary><span class="acc-n">4</span> Your photos stay safe</summary>
+        <div class="acc-body">
+          <p><strong>Your library and photos are separate and are NOT removed.</strong> They remain in the library folder you chose. Only delete that folder yourself if you also want to erase your media.</p>
+        </div>
+      </details>
+    </section>
+
+    <section id="questions">
+      <h2>Common questions</h2>
+      <p class="section-lede">The everyday stuff — answered simply.</p>
+
+      <details class="acc">
+        <summary><span class="acc-n">Q</span> Where are my photos actually stored?</summary>
+        <div class="acc-body">
+          <p>On your own computer, in the library folder you pick. They're never sent to FerroVault or any cloud company.</p>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary><span class="acc-n">Q</span> If I uninstall the app, do I lose my photos?</summary>
+        <div class="acc-body">
+          <p>No. The app and your photo library are separate — uninstalling removes the app, not your media.</p>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary><span class="acc-n">Q</span> How do I open the dashboard from my phone or another computer?</summary>
+        <div class="acc-body">
+          <p>Use your server's network address — your computer's IP, for example <code>http://192.168.1.50:5256</code>. The Mac menu bar has a <strong>Copy LAN URL</strong> button for exactly this. (<code>localhost</code> only works on the computer running the server.)</p>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary><span class="acc-n">Q</span> Does the server need to stay running?</summary>
+        <div class="acc-body">
+          <p>Yes — keep the app running (turning on <strong>Start at Login</strong> makes this effortless). Your phone backs up whenever it can reach the server on your network.</p>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary><span class="acc-n">Q</span> Is it private and secure?</summary>
+        <div class="acc-body">
+          <p>Your photos stay on your network unless you choose otherwise. The Mac app is Apple-notarized, and access requires your account.</p>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary><span class="acc-n">Q</span> What photo formats does it handle?</summary>
+        <div class="acc-body">
+          <p>HEIC/HEIF, Live Photos, RAW, JPEG, PNG, and video.</p>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary><span class="acc-n">Q</span> Can my family use it too?</summary>
+        <div class="acc-body">
+          <p>Yes — it supports multiple users and devices. Pair a new phone in seconds with a QR code.</p>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary><span class="acc-n">Q</span> Do my iPhone photos upload as weird HEIC files my PC can't open?</summary>
+        <div class="acc-body">
+          <p>FerroVault keeps your originals and can show and serve them properly. An export-to-JPEG option is on the roadmap.</p>
+        </div>
+      </details>
+
+      <details class="acc">
+        <summary><span class="acc-n">Q</span> What happens if my disk gets full?</summary>
+        <div class="acc-body">
+          <p>The menu-bar Quick Glance shows storage used and free, and warns you before you run out.</p>
+        </div>
+      </details>
+    </section>
+  </main>
+
+  <footer class="site">
+    <span>FerroVault</span>
+    <a href="index.html">Home</a>
+    <a href="privacy.html">Privacy policy</a>
+    <a href="mailto:ferro.dev@icloud.com">Questions we missed? ferro.dev@icloud.com</a>
+  </footer>
+
+</div>
+</body>
+</html>

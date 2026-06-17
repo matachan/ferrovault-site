@@ -254,3 +254,43 @@ details.acc[open] summary::after { content: "\2212"; /* minus */ }
 @media (prefers-reduced-motion: no-preference) {
   details.acc[open] .acc-body { animation: rise 0.35s ease; }
 }
+
+/* ---------- faq: feature list, note callout, inline code ---------- */
+
+ul.feat {
+  list-style: none;
+  margin: 0; padding: 0;
+  max-width: 60ch;
+}
+ul.feat li {
+  position: relative;
+  padding: 0.55rem 0 0.55rem 1.5rem;
+  border-top: 1px solid var(--seam);
+  color: var(--muted);
+}
+ul.feat li:first-child { border-top: none; }
+ul.feat li::before {
+  content: "—";
+  position: absolute; left: 0;
+  color: var(--ember); font-weight: 700;
+}
+ul.feat li strong { color: var(--text); }
+
+.note {
+  margin-top: 1.8rem;
+  border-left: 3px solid var(--ember);
+  padding: 0.5rem 0 0.5rem 1rem;
+  color: var(--text);
+  font-size: 1rem;
+  max-width: 60ch;
+}
+
+code {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 0.9em;
+  background: var(--iron);
+  border: 1px solid var(--seam);
+  border-radius: 4px;
+  padding: 0.1rem 0.4rem;
+  color: var(--text);
+}
